@@ -1,0 +1,98 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- Card column -->
+  <div fxFlex.gt-sm="100%" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title> Doctores <span class="bg-success text-white rounded font-12 pl-5 pr-5">New</span>
+        </mat-card-title>
+        <mat-card-subtitle>Completar todos los campos que sean requeridos <code>*</code>.</mat-card-subtitle>
+        <button mat-raised-button (click)="isOptional = !isOptional">
+          {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+        </button>
+
+        <mat-vertical-stepper linear #stepperoptional>
+          <mat-step [stepControl]="optionalfirstFormGroup" [optional]="isOptional">
+            <form [formGroup]="optionalfirstFormGroup">
+              <ng-template matStepLabel> Nombres </ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Por favor, digitar Nombre Completo" formControlName="optionalfirstCtrl"
+                  required>
+              </mat-form-field>
+              <div>
+                <button mat-raised-button matStepperNext color="accent">Siguiente</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="optionalsecondFormGroup" [optional]="isOptional">
+            <form [formGroup]="optionalsecondFormGroup">
+              <ng-template matStepLabel> Apellidos </ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Por favor, digitar Apellido Completo" formControlName="optionalsecondCtrl"
+                  required>
+              </mat-form-field>
+              <div class="button-row">
+                <button mat-raised-button color="primary" matStepperPrevious>Atrás</button>
+                <button mat-raised-button color="accent" matStepperNext>Siguiente</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="optionalsecondFormGroup" [optional]="isOptional">
+            <form [formGroup]="optionalsecondFormGroup">
+              <ng-template matStepLabel> Dirección </ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Por favor, digitar dirección" formControlName="optionalsecondCtrl"
+                  required>
+              </mat-form-field>
+              <div class="button-row">
+                <button mat-raised-button color="primary" matStepperPrevious>Atrás</button>
+                <button mat-raised-button color="accent" matStepperNext>Siguiente</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="optionalsecondFormGroup" [optional]="isOptional">
+            <form [formGroup]="optionalsecondFormGroup">
+              <ng-template matStepLabel> Barrio - Ciudad </ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Por favor, digitar el Barrio y Ciudad" formControlName="optionalsecondCtrl"
+                  required>
+              </mat-form-field>
+              <div class="button-row">
+                <button mat-raised-button color="primary" matStepperPrevious>Atrás</button>
+                <button mat-raised-button color="accent" matStepperNext>Siguiente</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="optionalsecondFormGroup">
+            <form [formGroup]="optionalsecondFormGroup">
+              <ng-template matStepLabel> Especialidades </ng-template>
+              <mat-form-field>
+
+                <mat-label>Especialidades</mat-label>
+                <mat-select [formControl]="toppings" multiple >
+                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+              <div class="button-row">
+                <button mat-raised-button color="primary" matStepperPrevious>Atrás</button>
+                <button mat-raised-button color="accent" matStepperNext>Siguiente</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Finalizar</ng-template>
+            ¿Desea guardar los datos insertados?
+            <div class="button-row m-t-20">
+              <button mat-raised-button color="primary" matStepperPrevious>Atras</button>
+              <button mat-raised-button color="warn" (click)="stepperoptional.reset()">Limpiar Todo</button>
+              <button mat-raised-button color="accent" matStepperPrevious>Aceptar</button>
+            </div>
+          </mat-step>
+        </mat-vertical-stepper>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

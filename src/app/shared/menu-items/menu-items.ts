@@ -8,48 +8,72 @@ export interface Menu {
 }
 
 const MENUITEMS = [
-  { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
-  { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
-  { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
-  { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
-  { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
-  { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
-  { state: 'stepper', type: 'link', name: 'Stepper', icon: 'web' },
+  { state: 'dashboard', name: 'Inicio', type: 'link', icon: 'av_timer' },
   {
-    state: 'expansion',
+    state: 'doctor',
     type: 'link',
-    name: 'Expansion Panel',
-    icon: 'vertical_align_center'
-  },
-  { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
-  { state: 'toolbar', type: 'link', name: 'Toolbar', icon: 'voicemail' },
-  {
-    state: 'progress-snipper',
-    type: 'link',
-    name: 'Progress snipper',
-    icon: 'border_horizontal'
+    name: 'Doctor',
+    icon: 'assignment_ind'
   },
   {
-    state: 'progress',
+    state: 'patient',
     type: 'link',
-    name: 'Progress Bar',
-    icon: 'blur_circular'
+    name: 'Paciente',
+    icon: 'accessibility'
   },
   {
-    state: 'dialog',
+    state: 'specialty',
     type: 'link',
-    name: 'Dialog',
-    icon: 'assignment_turned_in'
+    name: 'Especialidad',
+    icon: 'supervisor_account'
   },
-  { state: 'tooltip', type: 'link', name: 'Tooltip', icon: 'assistant' },
-  { state: 'snackbar', type: 'link', name: 'Snackbar', icon: 'adb' },
-  { state: 'slider', type: 'link', name: 'Slider', icon: 'developer_mode' },
   {
-    state: 'slide-toggle',
+    state: 'consult',
     type: 'link',
-    name: 'Slide Toggle',
-    icon: 'all_inclusive'
-  }
+    name: 'Consultas',
+    icon: 'assignment'
+  },
+   { state: 'button', type: 'link', name: 'Especialidad', icon: 'crop_7_5' },
+   { state: 'grid', type: 'link', name: 'Paciente', icon: 'view_comfy' },
+   { state: 'lists', type: 'link', name: 'Cita', icon: 'view_list' },
+   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
+   { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
+   { state: 'stepper', type: 'link', name: 'Stepper', icon: 'web' },
+   {
+     state: 'expansion',
+     type: 'link',
+     name: 'Expansion Panel',
+     icon: 'vertical_align_center'
+   },
+   { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
+   { state: 'toolbar', type: 'link', name: 'Toolbar', icon: 'voicemail' },
+   {
+     state: 'progress-snipper',
+     type: 'link',
+     name: 'Progress snipper',
+     icon: 'border_horizontal'
+   },
+   {
+     state: 'progress',
+     type: 'link',
+     name: 'Progress Bar',
+     icon: 'blur_circular'
+   },
+   {
+     state: 'dialog',
+     type: 'link',
+     name: 'Dialog',
+     icon: 'assignment_turned_in'
+   },
+   { state: 'tooltip', type: 'link', name: 'Tooltip', icon: 'assistant' },
+   { state: 'snackbar', type: 'link', name: 'Snackbar', icon: 'adb' },
+   { state: 'slider', type: 'link', name: 'Slider', icon: 'developer_mode' },
+   {
+     state: 'slide-toggle',
+     type: 'link',
+     name: 'Slide Toggle',
+     icon: 'all_inclusive'
+   }
 ];
 
 @Injectable()

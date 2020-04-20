@@ -1,3 +1,7 @@
+import { ConsutlComponent } from './consutl/consutl.component';
+import { SpecialtyComponent } from './specialty/specialty.component';
+import { PatientComponent } from './patient/patient.component';
+import { DoctorComponent } from './doctor/doctor.component';
 import { Routes } from '@angular/router';
 
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -81,5 +85,21 @@ export const MaterialRoutes: Routes = [
   {
     path: 'slide-toggle',
     component: SlideToggleComponent
+  },
+  {
+    path: 'doctor',
+    component: DoctorComponent
+  },
+  {
+    path: 'patient',
+    component: PatientComponent
+  },
+  {
+    path: 'specialty',
+    component: SpecialtyComponent
+  },
+  {
+    path: 'consult',
+    component: ConsutlComponent
   }
 ];
