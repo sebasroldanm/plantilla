@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +7,11 @@ import { Injectable } from '@angular/core';
 })
 export class ConsultService {
 
-  constructor() { }
+  url = `${environment.HOST}/doctor`;
+
+  constructor(private http: HttpClient) { }
+
+  listar() {
+    // return this.http.get<Doctor[]>(`${this.url}/get`);
+  }
 }
