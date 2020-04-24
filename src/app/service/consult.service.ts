@@ -11,7 +11,7 @@ export class ConsultService {
 
   constructor(private http: HttpClient) { }
 
-  listar() {
+  // listar() {
     // return this.http.get<Doctor[]>(`${this.url}/get`);
-  }
+  // }
 }
