@@ -18,7 +18,7 @@
             <form [formGroup]="optionalfirstFormGroup">
               <ng-template matStepLabel> Nombres </ng-template>
               <mat-form-field>
-                <input matInput placeholder="Por favor, digitar Nombre Completo" formControlName="optionalfirstCtrl"
+                <input matInput placeholder="Por favor, digitar Nombre Completo" formControlName="name"
                   required>
               </mat-form-field>
               <div>
@@ -30,7 +30,7 @@
             <form [formGroup]="optionalsecondFormGroup">
               <ng-template matStepLabel> Apellidos </ng-template>
               <mat-form-field>
-                <input matInput placeholder="Por favor, digitar Apellido Completo" formControlName="optionalsecondCtrl"
+                <input matInput placeholder="Por favor, digitar Apellido Completo" formControlName="lastname"
                   required>
               </mat-form-field>
               <div class="button-row">
@@ -43,7 +43,7 @@
             <form [formGroup]="optionalsecondFormGroup">
               <ng-template matStepLabel> Dirección </ng-template>
               <mat-form-field>
-                <input matInput placeholder="Por favor, digitar dirección" formControlName="optionalsecondCtrl"
+                <input matInput placeholder="Por favor, digitar dirección" formControlName="address"
                   required>
               </mat-form-field>
               <div class="button-row">
@@ -56,7 +56,7 @@
             <form [formGroup]="optionalsecondFormGroup">
               <ng-template matStepLabel> Barrio - Ciudad </ng-template>
               <mat-form-field>
-                <input matInput placeholder="Por favor, digitar el Barrio y Ciudad" formControlName="optionalsecondCtrl"
+                <input matInput placeholder="Por favor, digitar el Barrio y Ciudad" formControlName="neighborhood"
                   required>
               </mat-form-field>
               <div class="button-row">
@@ -72,7 +72,7 @@
 
                 <mat-label>Especialidades</mat-label>
                 <mat-select [formControl]="toppings" multiple >
-                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                  <mat-option *ngFor="let topping of selectSpecialty" [value]="topping.id">{{topping.name}}</mat-option>
                 </mat-select>
 
               </mat-form-field>
